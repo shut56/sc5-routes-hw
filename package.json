@@ -69,6 +69,7 @@
         "@babel/register": "^7.14.5",
         "@babel/runtime": "^7.14.8",
         "@emotion/babel-plugin": "^11.3.0",
+        "axios": "^0.22.0",
         "babel-core": "7.0.0-bridge.0",
         "babel-eslint": "10.1.0",
         "babel-jest": "^27.0.6",
@@ -153,7 +154,8 @@
     },
     "nodemonConfig": {
         "ignore": [
-            "*.hot-update.json"
+            "*.hot-update.json",
+            "server/data/*.json"
         ]
     },
     "husky": {
