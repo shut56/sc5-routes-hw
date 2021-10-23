@@ -105,7 +105,7 @@ server.post('/api/v1/users', async (req, res) => {
   const response = await readFile(globalPath, 'utf-8')
     .then(async (str) => {
       const parsedString = JSON.parse(str)
-      const lastId = parsedString[parsedString.length - 1].id + 1
+      const lastId = (parsedString[parsedString.length - 1]?.id || 0) + 1
       await writeNewFile([...parsedString, { ...req.body, id: lastId }])
       return { status: 'success', id: lastId }
     })
