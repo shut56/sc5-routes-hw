@@ -57,7 +57,6 @@ npm-debug.log
 .vscode
 
 # coverage
-
 /coverage
 /_build
 .env
@@ -66,3 +65,6 @@ dist
 */.DS_Store
 yarn-error.log
 *.csv
+
+# Static data
+server/data/**/*.json
